@@ -14,6 +14,9 @@
     <thead>
         <tr>
             <th>
+                Id
+            </th>
+            <th>
                 Date
             </th>
             <th>
@@ -31,6 +34,9 @@
         @foreach (var weatherForecast in Model.WeatherForecasts)
         {
             <tr>
+                <td>
+                    @weatherForecast.Id
+                </td>
                 <td>
                     @weatherForecast.Date
                 </td>

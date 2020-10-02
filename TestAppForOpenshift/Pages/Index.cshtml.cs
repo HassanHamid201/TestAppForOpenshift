@@ -24,9 +24,10 @@ namespace TestAppForOpenshift.Pages
         public void OnGet()
         {
             var rng = new Random();
-            WeatherForecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            WeatherForecasts = Enumerable.Range(1, 5).Select((s,i) => new WeatherForecast
             {
-                Date = DateTime.Now.AddDays(index),
+                Id = i,
+                Date = DateTime.Now.AddDays(s),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
